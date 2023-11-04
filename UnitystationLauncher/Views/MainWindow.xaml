@@ -6,25 +6,17 @@
         ExtendClientAreaToDecorationsHint="True"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="555"
         x:Class="UnitystationLauncher.Views.MainWindow"
-        CanResize="False"
+        CanResize="True"
         Icon="/Assets/Ian512.png"
-        Title="Station Hub"
+        Title="StationHub"
         WindowStartupLocation="CenterScreen"
-        Width="800"
-        Height="555"
+        MinWidth="800"
+        MinHeight="555"
         Background="#19212c">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30.5" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+        <Grid RowDefinitions="30.5,*">
             <DockPanel Background="#05131e" x:Name="TitleBar" Grid.Row="0">
                 <Border BorderThickness="0.4" BorderBrush="#ffffff">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.8*" />
-                            <ColumnDefinition Width="0.2*" />
-                        </Grid.ColumnDefinitions>
+                    <Grid ColumnDefinitions="0.8*,0.2*">
                         <StackPanel Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
                                     Orientation="Horizontal">
                             <Image Source="/Assets/Ian64.png" Width="26" Height="26" Stretch="UniformToFill" />

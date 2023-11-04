@@ -11,7 +11,7 @@
             </Style>
         </DockPanel.Styles>
         <Image DockPanel.Dock="Left" Source="/Assets/unityico.png" Margin="5" Width="65" Height="65" Stretch="Uniform" />
-        <Panel DockPanel.Dock="Right" Margin="5" MinWidth="180" >
+        <Panel DockPanel.Dock="Right" Margin="30, 0, 0, 0" MinWidth="180" >
             <!-- Download Button -->
             <Button Command="{Binding Path=$parent[UserControl;1].DataContext.DownloadCommand}" 
                     CommandParameter="{Binding}" 

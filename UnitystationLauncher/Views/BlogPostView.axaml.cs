@@ -1,19 +1,13 @@
 using Avalonia.Controls;
 using Avalonia.Input;
-using Avalonia.Markup.Xaml;
 
 namespace UnitystationLauncher.Views;
 
-public class BlogPostView : UserControl
+public partial class BlogPostView : UserControl
 {
     public BlogPostView()
     {
         InitializeComponent();
-    }
-
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
     }
 
     private void InputElement_OnPointerLeave(object? sender, PointerEventArgs e)

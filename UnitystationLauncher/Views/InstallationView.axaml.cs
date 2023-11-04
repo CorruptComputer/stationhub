@@ -1,18 +1,11 @@
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 
-namespace UnitystationLauncher.Views
+namespace UnitystationLauncher.Views;
+
+public partial class InstallationView : UserControl
 {
-    public class InstallationView : UserControl
+    public InstallationView()
     {
-        public InstallationView()
-        {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
+        InitializeComponent();
     }
 }

@@ -99,14 +99,14 @@ namespace UnitystationLauncher.Views
         {
             Close();
         }
-
-        protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
+        
+        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
         {
             base.OnPropertyChanged(change);
 
-            if (change.Property == WindowStateProperty)
+            if (change.Property == WindowStateProperty && change.NewValue is WindowState windowState)
             {
-                PseudoClasses.Set(":maximised", change.NewValue.HasValue && change.NewValue.GetValueOrDefault<WindowState>() == WindowState.Maximized);
+                PseudoClasses.Set(":maximised", windowState == WindowState.Maximized);
             }
         }
     }

@@ -12,10 +12,15 @@ namespace UnitystationLauncher
     {
         public bool SupportsRecycling => false;
 
-        public IControl Build(object data)
+        public Control Build(object? data)
         {
-            var viewName = data.GetType().FullName!.Replace("ViewModel", "View");
-            var type = Type.GetType(viewName);
+            if (data == null)
+            {
+                throw new ArgumentNullException(nameof(data), "data is null");
+            }
+            
+            string viewName = data.GetType().FullName!.Replace("ViewModel", "View");
+            Type? type = Type.GetType(viewName);
 
             if (type != null)
             {
@@ -25,7 +30,7 @@ namespace UnitystationLauncher
             return new TextBlock { Text = "Not Found: " + viewName };
         }
 
-        public bool Match(object data)
+        public bool Match(object? data)
         {
             return data is ViewModelBase;
         }

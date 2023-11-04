@@ -1,17 +1,12 @@
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+using Serilog;
 
 namespace UnitystationLauncher.Views;
 
-public class ChangeView : UserControl
+public partial class ChangeView : UserControl
 {
     public ChangeView()
     {
         InitializeComponent();
-    }
-
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
     }
 }

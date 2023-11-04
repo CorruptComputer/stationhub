@@ -14,7 +14,7 @@
         </DockPanel>
         <ScrollViewer>
             <StackPanel>
-                <ItemsControl Items="{Binding InstallationViews}" />
+                <ItemsControl ItemsSource="{Binding InstallationViews}" />
             </StackPanel>
         </ScrollViewer>
     </DockPanel>

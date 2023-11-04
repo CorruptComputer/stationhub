@@ -123,7 +123,7 @@ public class ServersPanelViewModel : PanelBase
         if (download == null)
         {
             MessageBoxBuilder.CreateMessageBox(MessageBoxButtons.Ok, "Problem downloading server",
-                downloadFailReason).Show();
+                downloadFailReason).ShowAsync();
             return;
         }
 
