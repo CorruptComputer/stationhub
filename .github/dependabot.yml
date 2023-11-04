@@ -5,3 +5,22 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+groups:
+  avalonia:
+    patterns:
+    - "*Avalonia*"
+  serilog:
+    patterns:
+    - "*Serilog*"
+  autofac:
+    patterns:
+    - "*Autofac*"
+  runtimes:
+    patterns:
+    - "runtime.*"
+  testing:
+    patterns:
+    - "coverlet.*"
+    - "xunit*"
+    - "FluentAssertions"
+    - "Microsoft.NET.Test.Sdk"
